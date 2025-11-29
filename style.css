@@ -1,0 +1,21 @@
+body{
+    align-items: center;
+    padding: 2%;
+}
+
+.navbar{
+}
+
+.about-us{
+    display: flex;
+    flex-direction: row;
+}
+
+.team-members{
+    display: flex;
+    flex-direction: row;
+}
+
+.team-member{
+    padding: 2%;
+}
