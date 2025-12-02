@@ -1,9 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Jua&family=Sniglet:wght@400;800&family=Syne:wght@400..800&display=swap');
+
 body{
     align-items: center;
     padding: 2%;
+    background-color: #FFF0F5;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: 
+        linear-gradient(rgba(255, 182, 193, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 182, 193, 0.15) 1px, transparent 1px);
+    background-size: 15px 15px;
+    pointer-events: none;
+}
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: 
+        radial-gradient(circle at 0% 0%, rgb(255, 192, 203) 0%, transparent 40%),
+        radial-gradient(circle at 100% 0%, rgba(255, 182, 193) 0%, transparent 40%),
+        radial-gradient(circle at 0% 100%, rgba(255, 192, 203) 0%, transparent 40%),
+        radial-gradient(circle at 100% 100%, rgba(255, 182, 193) 0%, transparent 40%);
+    pointer-events: none;
 }
 
-.navbar{
+h1{
+    font-family: "Sniglet", system-ui;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 10vh;
+    color: #DF638D;
+}
+.bio h2{
+    color: #444B40;
+    font-family: "Chonburi", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h2{
+    font-family: "Sniglet", system-ui;
+    font-weight: 800;
+    font-style: normal;
+    color: #DF638D;
+    font-size: 5vh;
+}
+h3{
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #DF638D;
+}
+h4{
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #80897B;
+}
+p{
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    color: #F59A9C;
+}
+.bio{
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    width: 100%;
+    position: relative;
+    h1, h2{
+        margin-top:0px;
+        margin-bottom: 0px;
+        margin-right: 10vw
+    }
+    --dotSize: 0.4rem;
+}
+.bio::after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    inset: 0;
+      background-image: radial-gradient(
+      circle at center,
+      rgb(228, 159, 174) var(--dotSize),
+      transparent 0
+    );
+    background-size: 1.3rem 1.3rem;
+    background-position: 0 0, 0.65rem 0.65rem;
+    mask-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0));
+}
+.bio-text{
+    margin-right: 15vw;
 }
 
 .about-us{
