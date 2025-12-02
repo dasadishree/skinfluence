@@ -108,6 +108,42 @@ p{
 .bio-text{
     margin-right: 15vw;
 }
+.bio-image{
+    display: flex;
+}
+.bio-logo{
+    z-index: 0;
+}
+.circle{
+    z-index: 1;
+    position: absolute;
+    top: 5vh; 
+    right: 20vw;
+    width: 9vw;
+    height: 12vw; 
+    border-radius: 50%;
+    border: 2px solid #C5C573;
+}
+.circle2{
+    z-index: 1;
+    position: absolute;
+    top: 5vh; 
+    right: 17vw;
+    width: 7vw;
+    height: 12vw; 
+    border-radius: 50%;
+    border: 2px solid #A1C4AF;
+}
+.circle3{
+    z-index: 1;
+    position: absolute;
+    top: 5vh; 
+    right: 15vw;
+    width: 5vw;
+    height: 12vw; 
+    border-radius: 50%;
+    border: 2px solid #F59A9C;
+}
 
 .about-us{
     display: flex;
