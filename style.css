@@ -71,6 +71,17 @@ h4{
     font-style: normal;
     color: #80897B;
 }
+h6{
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    color: #DF638D;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+}
 p{
     font-family: "Syne", sans-serif;
     font-optical-sizing: auto;
@@ -116,6 +127,16 @@ p{
 
 .hamburger-menu.active .bar:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(4px, 4px);
+    }
+    
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(4px, -4px);
+    }
 }
 
 /* side menu */
@@ -205,6 +226,8 @@ p{
 }
 .bio-logo{
     z-index: 0;
+    max-width: 100%;
+    height: auto;
 }
 .circle{
     z-index: 1;
@@ -283,11 +306,366 @@ p{
     text-align: center;
 }
 
+/* team */
+.our-team{
+    padding: 3% 5%;
+    text-align: center;
+}
+.our-team h2{
+    font-size: 7vh;
+    margin-bottom: 3rem;
+}
 .team-members{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 0;
 }
 
 .team-member{
-    padding: 2%;
+    background-color: rgba(255, 240, 245, 0.8);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px dotted rgba(223, 99, 141, 0.3);
+    box-shadow: 0 4px 15px rgba(223, 99, 141, 0.1);
+}
+
+.team-member:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(223, 99, 141, 0.2);
+}
+
+.team-member img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #DF638D;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(223, 99, 141, 0.3);
+    max-width: 100%;
+}
+
+.team-member h4{
+    margin: 0.5rem 0;
+    font-size: 1.3rem;
+    color: #80897B;
+}
+
+.team-member h6{
+    margin: 0.5rem 0 1rem 0;
+    font-size: 0.95rem;
+    color: #DF638D;
+    font-weight: 500;
+}
+
+.team-member p{
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    color: #F59A9C;
+    max-width: 100%;
+}
+
+/* responsive*/
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 8vh;
+    }
+    
+    h2 {
+        font-size: 4vh;
+    }
+    
+    .about-us h2,
+    .join h2,
+    .our-team h2 {
+        font-size: 5vh;
+    }
+    
+    .about-us p,
+    .join p {
+        font-size: 2.5vh;
+    }
+    
+    .bio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .bio-text {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .bio-image {
+        justify-content: center;
+    }
+    
+    .circle,
+    .circle2,
+    .circle3 {
+        display: none;
+    }
+    
+    .join {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .join .team,
+    .join .chapter {
+        width: 100%;
+    }
+    
+    .join h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .join p {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 1%;
+    }
+    
+    h1 {
+        font-size: 6vh;
+    }
+    
+    h2 {
+        font-size: 3.5vh;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+    }
+    
+    .navbar {
+        padding: 1rem;
+        position: relative;
+    }
+    
+    .hamburger-menu {
+        width: 30px;
+        height: 30px;
+        right: 1rem;
+    }
+    
+    .hamburger-menu .bar {
+        height: 3px;
+    }
+    
+    .side-menu {
+        width: 250px;
+    }
+    
+    .menu-item {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+    
+    .bio {
+        padding: 1rem;
+    }
+    
+    .bio-text h4 {
+        font-size: 1rem;
+    }
+    
+    .bio-logo {
+        max-width: 150px;
+        height: auto;
+    }
+    
+    .about-us {
+        margin-left: 0;
+        padding: 1.5rem 1rem;
+    }
+    
+    .about-us h2 {
+        font-size: 4vh;
+        margin-top: 2rem;
+        margin-right: 0;
+    }
+    
+    .about-us p {
+        font-size: 1rem;
+        padding-top: 1rem;
+    }
+    
+    .join {
+        padding: 1rem;
+    }
+    
+    .join h2 {
+        font-size: 4vh;
+        margin-bottom: 1rem;
+    }
+    
+    .join p {
+        font-size: 1rem;
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .our-team {
+        padding: 2rem 1rem;
+    }
+    
+    .our-team h2 {
+        font-size: 4vh;
+        margin-bottom: 2rem;
+    }
+    
+    .team-members {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+    
+    .team-member {
+        padding: 1.5rem;
+    }
+    
+    .team-member img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .team-member h4 {
+        font-size: 1.1rem;
+    }
+    
+    .team-member h6 {
+        font-size: 0.85rem;
+    }
+    
+    .team-member p {
+        font-size: 0.85rem;
+    }
+    
+    .dotline {
+        border-top-width: 5px;
+        margin: 2rem 0;
+    }
+}
+
+/* small mobile */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 5vh;
+    }
+    
+    h2 {
+        font-size: 3vh;
+    }
+    
+    .navbar h3 {
+        font-size: 1rem;
+    }
+    
+    .hamburger-menu {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .side-menu {
+        width: 200px;
+        padding-top: 60px;
+    }
+    
+    .menu-item {
+        font-size: 1rem;
+        padding: 12px;
+    }
+    
+    .bio-text h4 {
+        font-size: 0.9rem;
+    }
+    
+    .bio-logo {
+        max-width: 120px;
+    }
+    
+    .about-us h2,
+    .join h2,
+    .our-team h2 {
+        font-size: 3.5vh;
+    }
+    
+    .about-us p,
+    .join p {
+        font-size: 0.9rem;
+    }
+    
+    .join p {
+        padding: 1rem;
+        margin: 0 0.5rem;
+    }
+    
+    .team-member {
+        padding: 1rem;
+    }
+    
+    .team-member img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .team-member h4 {
+        font-size: 1rem;
+    }
+    
+    .team-member p {
+        font-size: 0.8rem;
+    }
+}
+
+/*mobile landscape */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .bio {
+        flex-direction: row;
+    }
+    
+    .bio-text {
+        margin-right: 2rem;
+    }
+    
+    .join {
+        flex-direction: row;
+    }
+    
+    .team-members {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* very small height */
+@media screen and (max-height: 600px) {
+    .side-menu {
+        padding-top: 60px;
+    }
+    
+    .menu-item {
+        padding: 10px;
+    }
+    
+    .about-us h2 {
+        margin-top: 1rem;
+    }
 }
