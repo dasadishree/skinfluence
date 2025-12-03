@@ -156,7 +156,7 @@ p{
 
 .menu-item:hover {
     background-color: rgba(223, 99, 141, 0.1);
-    color: #C5C573;
+    color: #710057;
 }
 
 .menu-item:last-child {
@@ -240,13 +240,49 @@ p{
 /* about us section */
 .about-us{
     display: flex;
+    padding: 2%;
+    text-align: center;
     flex-direction: space-between;
+    margin-left: 7vw;
+}
+.about-us h2 {
+    font-size: 7vh;
+    display: block;
+    margin-top: 5rem;
+    margin-right: 1.5rem;
+}
+.about-us p{
+    font-size: 3vh;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.dotline{
+    border-top: 10px dotted #DF638D
 }
 
 /* join section */
 .join{
     display: flex;
 }
+.join h2{
+    font-size: 7vh;
+    margin-left: 10vw;
+}
+.join p{
+    font-size: 3vh;
+    margin-left: 5vw;
+    padding: 2vw;
+    background-color: rgba(245, 154, 156, 0.2);
+    border-style: dotted;
+    border-width: 10px;
+    border-color: #DF638D;
+    text-align: center;
+}
+
 .team-members{
     display: flex;
     flex-direction: row;
