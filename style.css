@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Jua&family=Sniglet:wght@400;800&family=Syne:wght@400..800&display=swap');
-
+/* basic styling */
 body{
     align-items: center;
     padding: 2%;
@@ -78,6 +78,98 @@ p{
     font-style: normal;
     color: #F59A9C;
 }
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 2%;
+}
+
+.hamburger-menu{
+    width: 2vw;
+    height: 2vw;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1001;
+    position: absolute;
+    right: 5vw;
+
+}
+.hamburger-menu .bar {
+    width: 100%;
+    height: 4px; 
+    background-color: #DF638D;
+    transition: 0.4s;
+    border-radius: 1px;
+}
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* side menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #FFF0F5;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding-top: 80px;
+}
+
+.side-menu.active {
+    right: 0;
+}
+
+.side-menu-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.menu-item {
+    padding: 20px;
+    text-decoration: none;
+    color: #DF638D;
+    font-family: "Sniglet", system-ui;
+    font-weight: 800;
+    font-size: 1.5rem;
+    border-bottom: 1px solid rgba(223, 99, 141, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: rgba(223, 99, 141, 0.1);
+    color: #C5C573;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+
+
+
+
+
+
+/* bio */
 .bio{
     display: flex;
     flex-direction: row;
@@ -145,11 +237,16 @@ p{
     border: 2px solid #F59A9C;
 }
 
+/* about us section */
 .about-us{
     display: flex;
-    flex-direction: row;
+    flex-direction: space-between;
 }
 
+/* join section */
+.join{
+    display: flex;
+}
 .team-members{
     display: flex;
     flex-direction: row;
